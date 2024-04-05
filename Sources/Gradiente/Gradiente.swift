@@ -102,25 +102,17 @@ public struct Gradiente: ViewModifier {
 }
 
 extension View {
-    func gradienteBackground(position: Position = .top,
-                             opacity: Double = 1.0,
-                             height: CGFloat = 300.0,
-                             colors: [Color]) -> some View {
+    public func gradienteBackground(position: Position = .top,
+                                    opacity: Double = 1.0,
+                                    height: CGFloat = 300.0,
+                                    colors: [Color]) -> some View {
         modifier(Gradiente(position: position, opacity: opacity, height: height, colors: colors))
     }
     
-    func gradienteBackground(position: Position = .top,
-                             opacity: Double = 1.0,
-                             height: CGFloat = 300.0,
-                             gradient: Gradient) -> some View {
+    public func gradienteBackground(position: Position = .top,
+                                    opacity: Double = 1.0,
+                                    height: CGFloat = 300.0,
+                                    gradient: Gradient) -> some View {
         modifier(Gradiente(position: position, opacity: opacity, height: height, gradient: gradient))
     }
-}
-
-#Preview {
-    ContentView()
-}
-
-#Preview {
-    ContentView().preferredColorScheme(.dark)
 }
