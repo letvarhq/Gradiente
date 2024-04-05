@@ -29,7 +29,7 @@ public enum Position {
     }
 }
 
-public struct Gradiente: ViewModifier {
+struct Gradiente: ViewModifier {
     
     @State var position: Position
     @State var colors: [Color]?
@@ -58,7 +58,7 @@ public struct Gradiente: ViewModifier {
         self.height = height
     }
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         ZStack {
             VStack {
                 
